@@ -82,6 +82,7 @@ void Convert2Databytes(struct s_ParametersOfMCZ *pParam, struct s_Octet *oct)
 					   pParam->Puissance <<2 | 
 					   pParam->Modes) & 0xFF;
    oct->O_Parameter2 = (pParam->User <<6 | pParam->Ventilateur2 << 3) & 0xFF;
+   oct->O_Parameter2 |= 0x7;
 }
 /***************************************************************************
               Calcul du CRC-CCITT16.   
